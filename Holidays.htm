@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Form</title>
+    <!-------------Common files for all---------->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="Stylesheet" type="text/css"/>
+	<!-------------Common files End-------------->
+		
+    <link href="css/HolidayStyle.css" rel="Stylesheet" type="text/css" media="all" />
+    <link href="css/JQuery_UI.css" rel="stylesheet"type="text/css" />
+    <script type="text/javascript" src="js/HolidayJs.js"></script> 
+   
+</head>
+<body>
+  
+      <form id="HolidayForm" action="" method="post">
+        <div id="Holidays" class="wgtfrmbox">
+         <div id="errMessPkg" class="error_msg" style="display:none;"></div>
+         <div class="wgtfrmrow">
+             <label><input type="radio" id="SearchByTheme" name="holidayPackage"  value="1" checked="checked" /> Search By Theme</label>
+             <label><input type="radio" id="SearchByDestination" name="holidayPackage"  value="0" /> Search By Destination</label>
+          </div>
+         <div id="SearchTheme">
+            <div class="wgtfrmrow">
+              <label>Choose Theme</label>
+               <select id="theme" name="theme">
+               <option selected="selected">--Please Select--</option>                  
+               </select>
+            </div>
+            <div class="wgtfrmrow">
+                <label><input type="checkbox" id="domTheme" name="domTheme"  checked="checked" /> Domestic</label>
+                <label><input type="checkbox" id="intTheme" name="intTheme" /> International</label>
+            </div>
+         </div>
+         <div id="SearchDestination" style="display:none;">
+             <div class="wgtfrmrow">
+                <label><input type="radio" id="SearchByDomestic" name="city" /> Domestic</label>
+                <label><input type="radio" id="SearchByInternational" name="city" /> International</label>
+            </div>
+            <div class="wgtfrmrow">
+                <label>Choose Destination</label>
+                <div id="domestic">    
+                       <select id="domCity" name="domCity">
+                         <option selected="selected">--Please Select--</option>
+                       </select>
+                    </div>
+                <div id="international" style="display:none;">
+                     <select id="intCity" name="cityName">
+                        <option selected="selected">--Please Select--</option>
+                     </select>
+                  </div>
+            </div>
+         </div>
+         <div class="wgtfrmrow">
+             <a href="#!" id="packageSearch" class="fright wgtsearchbtn">Seach Holidays</a>
+         </div>
+        </div>
+      </form>
+   
+    
+</body>
+</html>

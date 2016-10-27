@@ -28,10 +28,10 @@ $(document).ready(function () {
         var remote = window.open("", 'cities', settings);
         remote.focus();
         if (this.id == "SelectListDomestic") {
-            remote.location.href = 'http://booking.craftedholidays.com/hotelcityList.htm';
+            remote.location.href = '/CraftedHolidays/hotelcityList.htm';
         }
         else {
-            remote.location.href = 'http://booking.craftedholidays.com/HotelCountry.aspx';
+            remote.location.href = '/CraftedHolidays/hotelcityList.htm';
         }
         window.addEventListener('message', function (e) {
             var message = e.data;

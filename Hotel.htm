@@ -1,314 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Form</title>
+    
+	<!-------------Common files for all---------->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="Stylesheet" type="text/css"/>
+	<!-------------Common files End-------------->
+    <link href="css/HotelStyle.css" rel="Stylesheet" type="text/css" media="all" />
+    <link href="css/JQuery_UI.css" rel="stylesheet"type="text/css" />
+    <script type="text/javascript" src="js/HotelJs.js"></script> 
 
-
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>
-    	   Booking
-        </title>
-        <meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    	<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link href="css/FlightStyle.css" rel="Stylesheet" type="text/css" media="all" />
-		<link href="css/JQuery_UI.css" rel="stylesheet"type="text/css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-        <script type="text/javascript" src="js/json2.js"></script>
-        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-        <script type="text/javascript" src="js/jquery-ui.js"></script>  
-		<script type="text/javascript" src="js/HotelJs.js"></script>
-		<script type="text/javascript" src="js/BusJs.js"></script>
-		<script type="text/javascript" src="js/FlightJs.js"></script>
-        
-        <!-- BookBlock -->
-        <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
-		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
-		<link rel="stylesheet" type="text/css" href="css/custom.css" />
-        <script src="js/modernizr.custom.79639.js"></script>
-        <script src="js/jquery.mousewheel.js"></script>
-		<script src="js/jquery.jscrollpane.min.js"></script>
-		<script src="js/jquerypp.custom.js"></script>
-		<script src="js/jquery.bookblock.js"></script>
-        <!-- BookBlock ends-->
-        
-        <!-- Time Select-->
-    	<link href="css/jquery.timepicker.css" rel="stylesheet" type="text/css" />
-    	<script type="text/javascript" src="js/jquery.timepicker.js"></script>
-    	<script type="text/javascript" src="js/main.js"></script></script> 
-        <!-- Time Select -->
-        
-        <script  type="text/javascript" language="javascript">
-            $(document).ready(function(){
-                $( "#menu ul li" ).mouseover(function() {
-                    //if ($(this).find(".sub_menu").hasClass("sub_menu")) {
-                        $( "#menu ul li" ).removeClass("active");
-                        $( this ).addClass("active");         
-                    //}
-                  });
-                  
-                $( "#menu ul li" ).mouseout(function() {
-                    $( "#menu ul li" ).removeClass("active");
-                    $( "#menu ul" ).find(".current").addClass("active");
-                  });
-            })
-        </script>
-        
-        <link href="images/favicon.png" rel="shortcut icon" type="image/png" />
-    </head>
-
-    <body id="CraftedHolidays_Body" style="background-image: url(&quot;images/about/bg.jpg&quot;);">
-        <div id="main_holder">
-            <div id="header">
-                <div id="logo">
-                    <a href="index.php"><img src="images/logo.png" width="100%" height="auto" title="Crafted Holidays: Luxury travel in Tahiti, South Africa and India" /></a>
-                </div>
-                <div id="menu">
-                    <ul>
-                        <li class="active current"><a href="content.php?page=about">About</a></li>
-                        <li class="">
-                            <a href="content.php?page=destinations">Destinations</a>
-                            <ul class="sub_menu">
-                                <li class="menu-toc-current"><a href="content.php?page=destinations&type=1" class="">India</a></li>
-                                <li><a href="content.php?page=destinations&type=2" class="">South Africa</a></li>
-                                <li><a href="content.php?page=destinations&type=3" class="">Tahiti</a></li>
-                            </ul>
-                        </li>
-                        <li class="">
-                            <a href="content.php?page=journey-styles">Journey Styles</a>
-                            <ul class="sub_menu">
-                                <li class="menu-toc-current"><a href="content.php?page=journey-style&type=1" class="">Luxe Travel</a></li>
-                                <li><a href="content.php?page=journey-style&type=2" class="">Adventure & Wildlife</a></li>
-                                <li><a href="content.php?page=journey-style&type=3" class="" onclick="nav(3);">Romantic</a></li>
-                                <li><a href="content.php?page=journey-style&type=4" class="">Beach Vacation</a></li>
-                                <li><a href="content.php?page=journey-style&type=5" class="">Wine Trails</a></li>
-                                <li><a href="content.php?page=journey-style&type=6" class="">Spa & Wellness</a></li>
-                                <li><a href="content.php?page=journey-style&type=7" class="">Medical Tourism</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a href="content.php?page=blog">Blog</a></li>
-                        <li class=""><a href="content.php?page=contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div id="social">
-                    <div class="social_link"><a href="https://www.facebook.com/pages/Crafted-Holidays/808469965880732" target="_blank"><img src="images/social/facebook.png" width="100%" height="auto" /></a></div>
-                    <div class="social_link"><a href="http://www.twitter.com/shreyatravels"><img src="images/social/twitter.png"  width="100%" height="auto"/></a></div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
-            <div class="content" style="background: url(images/about/bg.jpg) no-repeat; background-size: 100% 100%;">
-
-    <div class="content_boxes" style="margin: 0; padding: 0; width: 100%; height: 85%; display: table;">
-        
-<div class="container" style="margin-top:3%;">
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#flights"><i class="fa fa-plane" aria-hidden="true"></i> Flights</a></li>
-    <li><a data-toggle="tab" href="#hotels"><i class="fa fa-bed" aria-hidden="true"></i> Hotels</a></li>
-    <li><a data-toggle="tab" href="#buses"><i class="fa fa-bus" aria-hidden="true"></i> Buses</a></li>
-    <li><a data-toggle="tab" href="#packages"><i class="fa fa-briefcase" aria-hidden="true"></i> Packages</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="flights" class="tab-pane fade in active">
-		<form id="FlightForm" action="" method="post">
-        <div style="display:none;">
-        <input type="hidden" name="carrierOptions" />
-        <input type="hidden" name="preferredCarrier" />
-        <input type="hidden" name="isInternational" id="isInternational"/>
-        <input type="hidden" name="referenceId" />
-        <input type="hidden" name="imagePath" />
-        <input type="hidden" id="showInternational" />
-        <input type="hidden" id="IsSpecialReturnAllowed" value="True" />
-        <input type="hidden" id="promotionalPlanType" name="promotionalPlanType" value="Normal" />
-        <input type="hidden" id="searchType"  name="searchType" value="0"/>
-        <input type="hidden" id="flightSegmentCounter" name="flightSegmentCounter" value="1" />
-         <input type="hidden" id="fdepDate" name="depDate" value="" />
-        </div>
-      <div class="wgtfrmbox" id="Flights">
-             <span id="errMess" class="error_msg" style="display:none;">
-                    <span id="errorMessage"></span>
-                 </span>
-	      <!-- Flight form start here --->    
-			<ul class="wgt_flightnav">
-               <li id="one_Way" class="selected"><a class="oneway" href="#!" id="oneWay"><span class="fa fa-plane"></span> Oneway</a></li>
-               <li id="round_Trip"><a class="return" href="#!" id="roundTrip"><span class="fa fa-plane fa-rotate-270"></span> Return</a></li>
-               <li id="multi_Stop"><a class="multicity" href="#!" id="multiStop"><span class="fa fa-building-o"></span> Multi-city</a></li>
-               <li id="cal_Fare"><a class="air_cal" href="#!" id="calFare"><span class="fa fa-calendar-o"></span> Air Calendar</a></li>
-            </ul>
-           <div id="onewayReturnDiv">  
-              <div class="wgtfrmrow">
-                 <div>
-                     <label style="float:left;">Leaving From</label>
-                         <input type="text" id="origin" class="city_inpts" name="origin" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')"/>
-                 </div>
-                 <div>
-                     <label style="float:left;"><br>Going To</label>
-                         <input class="city_inpts" type="text" id="dest"  name="dest" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')"/>
-                 </div>
-              </div>
-              <div style="float:left;" id="onewayReturnDatesDiv">
-                     <span style="float:left;">
-                         <label style="float:left;">Departure</label>
-                         <dfn>
-                             <input class="wgtcal" type="text" id="DepDate" name="flightdepDate" value="DD/MM/YYYY" readonly="readonly"/>
-                         </dfn>  
-                         <select id="#" name="#" class="time_slect" style="display:none;"> 
-                         <option value="">Any Time</option>
-                         </select>
-                     </span>
-                     <span style="float:left;" id="retDate" style="display:none;">
-                         <label id="retText" style="float:left;">Return</label>
-                         <dfn>
-                             <input class="wgtcal" type="text" value="DD/MM/YYYY" id="ReturnDate" name="returnDate" readonly="readonly"/>
-                         </dfn>
-                         
-                         <select id="Select1" name="#" class="time_slect" style="display:none;"> 
-                         <option value="">Any Time</option>
-                         </select>
-                     </span>
-                 </div>
-
-               <div class="wgtfrmrow" id="calFareDatesDiv" style="display:none;">
-                     <span class="wgtfrmleft">
-                         <label class="city_lbl">Departure Month</label>
-                         <dfn>
-                           <select id="DepartureMonth" class="air_cdr">
-                               <option value="1">January</option>
-                               <option value="2">February</option>
-                               <option value="3">March</option>
-                               <option value="4">April</option>
-                               <option value="5">May</option>
-                               <option value="6">June</option>
-                               <option value="7">July</option>
-                               <option value="8">August</option>
-                               <option value="9">September</option>
-                               <option value="10">October</option>
-                               <option value="11">November</option>
-                               <option value="12">December</option>
-                           </select>
-                         </dfn>
-                     </span>
-                     <span class="wgtfrmright">
-                         <label class="city_lbl">Departure Year</label>
-                         <dfn>
-                            <select id="DepartureYear" class="air_cdr"></select>
-                         </dfn>
-                     </span>
-                 </div>
-           </div>
-               
-              <!-- Multicity Start here --->  
-              <div class="mcity_flds" id="multiStopDiv" style=" display:none;">
-                <div class="wgtfrmrow" id="MultiStopSegment_1">
-                   <div class="wgtmultirow">
-                        <span class="wgtfltno">&nbsp;</span>
-                        <span class="wgtmltdest" style="width:25%; padding-left:10%">Leaving From</span>
-                        <span class="wgtmltdest" style="width:35%">Going To</span>
-                        <span class="wgtmltdest" style="width:25%">Depart On</span>
-                   </div>
-                   <div class="wgtmultirow">
-                        <span class="wgtfltno" style="float:left; width:10%">Flight 1</span>
-                        <span class="wgtmltdest" style="width:25%">
-							<input type="text" id="multiStopOrigin_1" class="city_inpts" name="multiStopOrigin_1" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')"/>
-						</span>
-                        <span class="wgtmltdest" style="width:25%">
-							<input type="text" id="multiStopDest_1" name="multiStopDest_1" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')"/>
-						</span>
-                        <span class="wgtmltdest" style="width:25%">
-							<input type="text" id="multiStopDepDate_1" class="wgtcal" name="multiStopDepDate_1" value="DD/MM/YYYY" readonly="readonly"/>
-						</span>
-                   </div> 
-                </div>   
-               <div class="wgtfrmrow" id="MultiStopSegment_2" style="display:none;">
-                   <div class="wgtmultirow">
-                        <span class="wgtfltno">Flight 2</span>
-                        <span class="wgtmltdest"><input type="text" id="multiStopOrigin_2" name="multiStopOrigin_2" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')"/></span>
-                        <span class="wgtmltdest"><input type="text" id="multiStopDest_2" name="multiStopDest_2" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')"/></span>
-                        <span class="wgtmltdest"><input type="text" id="multiStopDepDate_2" class="wgtcal" name="multiStopDepDate_2" value="DD/MM/YYYY" readonly="readonly" style="cursor:pointer;"/></span>
-                        <a href="#!" id="removeMultiStop_2" class="wgtmltfltdel"><img src="./images/cnl.jpg" alt="cancel" /></a>
-                   </div>      
-                </div>
-                <div class="wgtfrmrow" id="MultiStopSegment_3" style="display:none;">
-                    <div class="wgtmultirow">
-                        <span class="wgtfltno">Flight 3</span>
-                        <span class="wgtmltdest"><input type="text" id="multiStopOrigin_3" name="multiStopOrigin_3" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')"/></span>
-                        <span class="wgtmltdest"><input type="text" id="multiStopDest_3" name="multiStopDest_3" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')"/>  </span>
-                        <span class="wgtmltdest"><input type="text" id="multiStopDepDate_3" class="wgtcal" name="multiStopDepDate_3" value="DD/MM/YYYY" readonly="readonly"/></span>
-                        <a href="#!" id="removeMultiStop_3" class="wgtmltfltdel"><img src="./images/cnl.jpg" alt="cancel" /></a>
-                   </div> 
-                </div>
-                <div class="wgtfrmrow" id="multi-add">
-                  <a href="#!" class="wgtaddflt" id="addMoreMultiStop"> + Add more flights</a>
-                </div>
-              </div>   
-              
-                      
-              <div class="wgtfrmrow" id="onewayreturnform">
-              <div class="wgtcountbox"> Travelers (upto 9 per Booking)</div>
-                     <span class="wgt_float_left" >
-                         <label class="wgt_float_left">Adults<br><span style="color:#bfbfbf">(12+)</span></label>
-                         <select name="adultCount" id="adultCount">
-                                <option value="1" >1</option> 
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                        </select>
-                       </span>
-                     
-                     <span class="wgt_float_left" style="margin-left:13%;">
-                         <label class="wgt_float_left">Children<span style="color:#bfbfbf"><br>(2-11)</span></label>
-                         <select name="childCount" id="childCount">
-                                <option value="0">0</option>
-					            <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                         </select>
-                     </span>
-                     
-                     <span class="wgt_float_left" style="margin-left:13%">
-                         <label class="wgt_float_left">Infants<br><span style="color:#bfbfbf">(0-2)</span></label>
-                         <select name="infantCount" id="infantCount">
-                            <option value="0">0</option>
-					        <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                         </select>  
-                     </span>
-                  </div>
-              <div class="wgtfrmrow">   
-                      <span class="wgtclass">
-                         <label><span style="float:left;">Class</span></label>
-                        <select name="cabinClass" class="fgt_slct">
-                          <option value="0">Any</option>
-                          <option value="1">Economy</option>
-                          <option value="3">Business</option>
-                          <option value="5">First</option>
-                       </select>
-                     </span>
-                  </div>
-               
-            <div class="wgtfrmrow">
-              
-              <span class="btn_box fright" id="fSearchbtn_box">
-                 <a href="#!" id="flightSearch" class="wgtsearchbtn">Search Flight</a>                 
-              </span>
-               <span class="btn_box fright" id="calFareBtn_box" style="display:none;">
-                 <a href="#!" id="CalendarWidget" class="wgtsearchbtn">Search Flight</a>               
-              </span>
-            </div>
-           </div>
-        <!-- Flight form end here --->
-      </form>
+</head>
+<body>
+    <div id="Logo" style="display: none;">
+        <span class="fleft banklogo">
+            <img alt="" src="images/logo.png" />
+        </span>
     </div>
-    <div id="hotels" class="tab-pane fade">
-      <form id="HotelForm" action="" method="post">
+    <div id="load-img" style="display: none;">
+        <div>
+            <img src="images/loader.gif"  alt="Loader" />
+        </div>
+    </div>
+    
+    <form id="HotelForm" action="" method="post">
      <div class="wgtfrmbox">
       <div>
         <input type="hidden" name="carrierOptions" />
@@ -331,7 +48,82 @@
              </div>
              <div id="selectDiv_Hotel" class="wgtfrmrow wgthtlistbox">
                  <label>Choose Destination</label>
-                 <input class="wgthtlcity" id="city" name="city" type="text" value="Type Or Select From List" onblur="markout(this, 'Type Or Select From List')" onfocus="markin(this, 'Type Or Select From List')" />
+                 <input class="wgthtlcity" id="city" name="city" type="text" value="Type Or Select From List" onblur="markout(this, 'Type Or Select From List')" onfocus="markin(this, 'Type Or Select From List')" />        
+                 <select class="hl_select" name="destCity" id="destCity" style="display:none;">
+                      <option value="Type Or Select From List" selected="selected" style="display:none;">Type Or Select From List</option>
+                                         <option value="14621|Amsterdam|Netherlands">Amsterdam,Netherlands</option>
+                                         <option value="17249|Antalya|Turkey">Antalya,Turkey</option>
+                                         <option value="9434|Athens|Greece">Athens,Greece</option>
+                                         <option value="10142|Bali|Indonesia">Bali,Indonesia</option>
+                                         <option value="16974|Bangkok|Thailand">Bangkok,Thailand</option>
+                                         <option value="3518|Barcelona|Spain">Barcelona,Spain</option>
+                                         <option value="23131|Basel|Switzerland">Basel,Switzerland</option>
+                                         <option value="23884|Beijing|China">Beijing,China</option>
+                                         <option value="13551|Beirut|Lebanon">Beirut,Lebanon</option>
+                                         <option value="1996|Berlin|Germany">Berlin,Germany</option>
+                                         <option value="24602|Brussels|Belgium"> Brussels,Belgium</option>
+                                         <option value="10085|Budapest|Hungary">Budapest,Hungary</option>
+                                         <option value="2418|Cairo|Egypt">Cairo,Egypt</option>
+                                         <option value="32443|Cape Town|South Africa">Cape Town,South Africa</option>
+                                         <option value="20491|Chicago|United States">Chicago,United States</option>
+                                         <option value="125|Cologne|Germany">Cologne,Germany</option>
+                                         <option value="13616|Colombo|Sri Lanka">Colombo,Sri Lanka</option>
+                                         <option value="2142|Copenhagen|Denmark">Copenhagen,Denmark</option>
+                                         <option value="25921|Dubai|United Arab Emirates">Dubai,United Arab Emirates</option>
+                                         <option value="32515|Durban|South Africa">Durban,South Africa</option>
+                                         <option value="27352|Dusseldorf|Germany"> Dusseldorf,Germany</option>
+                                         <option value="8030|Edinburgh|United Kingdom">Edinburgh,United Kingdom</option>
+                                         <option value="11213|Florence|Italy">Florence,Italy</option>
+                                         <option value="22753|Frankfurt|Germany">Frankfurt,Germany</option>
+                                         <option value="23435|Geneva|Switzerland">Geneva,Switzerland</option>
+                                         <option value="26698|Gold Coast|Australia">Gold Coast,Australia</option>
+                                         <option value="23960|Guangzhou|China">Guangzhou,China</option>
+                                         <option value="379|Hamburg|Germany">Hamburg,Germany</option>
+                                         <option value="9926|Hong Kong|Hong Kong">Hong Kong,Hong Kong</option>
+                                         <option value="26996|Innsbruck|Austria">Innsbruck,Austria</option>
+                                         <option value="23037|Interlaken|Switzerland">Interlaken,Switzerland</option>
+                                         <option value="17306|Istanbul|Turkey">Istanbul,Turkey</option>
+                                         <option value="32569|Johannesburg|South Africa">Johannesburg,South Africa</option>
+                                         <option value="15054|Kathmandu|Nepal">Kathmandu,Nepal</option>
+                                         <option value="14386|Kuala Lumpur|Malaysia">Kuala Lumpur,Malaysia</option>
+                                         <option value="35827|Kuwait|Kuwait">Kuwait,Kuwait</option>
+                                         <option value="14285|Langkawi|Malaysia">Langkawi,Malaysia</option>
+                                         <option value="32827|Las Vegas|United States">Las Vegas,United States</option>
+                                         <option value="34549|London|Canada">London,Canada</option>
+                                         <option value="9245|London|United Kingdom">London,United Kingdom</option>
+                                         <option value="18631|Los Angeles|United States">Los Angeles,United States</option>
+                                         <option value="23273|Lucerne|Switzerland">Lucerne,Switzerland</option>
+                                         <option value="13674|Macau|Macau">Macau,Macau</option>
+                                         <option value="3000|Madrid|Spain">Madrid,Spain</option>
+                                         <option value="14254|Mauritius|Mauritius">Mauritius,Mauritius</option>
+                                         <option value="26916|Melbourne|Australia">Melbourne,Australia</option>
+                                         <option value="11297|Milan|Italy">Milan,Italy</option>
+                                         <option value="266|Munich|Germany">Munich,Germany</option>
+                                         <option value="13443|Nairobi|Kenya">Nairobi,Kenya</option>
+                                         <option value="28985|New York|United States">New York,United States</option>
+                                         <option value="4419|Nice|France">Nice,France</option>
+                                         <option value="19533|Orlando|United States">Orlando,United States</option>
+                                         <option value="4775|Paris|France">Paris,France</option>
+                                         <option value="36773|Pattaya Beach|Thailand">Pattaya Beach,Thailand</option>
+                                         <option value="14321|Penang|Malaysia">Penang,Malaysia</option>
+                                         <option value="17093|Phuket|Thailand">Phuket,Thailand</option>
+                                         <option value="24332|Prague|Czech Republic">Prague\,Czech Republic</option>
+                                         <option value="12771|Rome|Italy">Rome,Italy</option>
+                                         <option value="27022|Salzburg|Austria">Salzburg,Austria</option>
+                                         <option value="18857|San Diego|United States">San Diego,United States</option>
+                                         <option value="18861|San Francisco|United States">San Francisco,United States</option>
+                                         <option value="23909|Shanghai|China">Shanghai,China</option>
+                                         <option value="23976|Shenzhen|China">Shenzhen,China</option>
+                                         <option value="16532|Singapore|Singapore">Singapore,Singapore</option>
+                                         <option value="34326|Sydney|Australia">Sydney,Australia</option>
+                                         <option value="13420|Tokyo|Japan">Tokyo,Japan</option>
+                                         <option value="34661|Toronto|Canada">Toronto,Canada</option>
+                                         <option value="25561|Vancouver|Canada">Vancouver,Canada</option>
+                                         <option value="11501|Venice|Italy">Venice,Italy</option>
+                                         <option value="27059|Vienna|Austria">Vienna,Austria</option>
+                                         <option value="23418|Zermatt|Switzerland">Zermatt,Switzerland</option>
+                                         <option value="23424|Zurich|Switzerland">Zurich,Switzerland</option>
+                    </select>
                  <a href="#null" id="SelectListInternational">Select from List</a>
              </div>
              <div class="wgtfrmrow">
@@ -1200,109 +992,8 @@
         <!--hotels End-->
        </div>
     </form>
-    </div>
-    <div id="buses" class="tab-pane fade">
-		<div class="wgtfrmbox">
-          <form id="BusForm" action="" method="post">
-      
-       <!--Bus Starts-->
-                  <div id="Bus" >
-                        <div style="display: none;" class="error_msg" id="errMsg">
-                          <span id="errMessage"></span>
-                        </div>
-                        <div class="wgtfrmrow">
-							<div class="wgtfrmleft">
-								<label>Leaving from</label>
-								<input type="text" onblur="markout(this, 'Enter any city')" onfocus="markin(this, 'Enter any city')"
-										 value="Enter any city" name="busSource" id="busSource" />
-										 <a href="#null" id="SelectListInternational">Select from List</a>
-								<input type="hidden" value="" name="hidCityCode" id="hidCityCode" />
-								<input type="hidden" value="" name="SourceId" id="SourceId" />
-							</div>
-							<div class="wgtfrmright">
-								<label>Going to</label>
-                                <select id="selectedDestinationCity" name="selectedDestinationCity">
-                                    <option selected="selected" value="0">Choose From List</option>
-                                </select>
-                                <input type="hidden" value="" name="BusDestination" id="BusDestination" />
-                                <input type="hidden" value="" name="DestinationId" id="DestinationId" />
-                            </div>
-						</div>	
-                        <div class="wgtfrmrow">
-							<div class="wgtfrmleft">  
-								<label>Departure</label>
-								<input type="text" id="departureDate" name="departureDate" value="DD/MM/YYYY" readonly="readonly" class="wgtcal"/>
-                            </div>
-						</div>
-						<div class="wgtfrmrow">						
-							<a href="#!" id="busSearch" class="wgtsearchbtn fright"><span class="fa fa-bus wgticon"></span> Search Bus</a>
-                        </div>  
-                    </div>
-       <!--Bus ends here-->
-   
-          </form>
-     </div>
-    </div>
-    <div id="packages" class="tab-pane fade">
-      <form id="HolidayForm" action="" method="post">
-        <div id="Holidays" class="wgtfrmbox">
-         <div id="errMessPkg" class="error_msg" style="display:none;"></div>
-         <div class="wgtfrmrow">
-             <label><input type="radio" id="SearchByTheme" name="holidayPackage"  value="1" checked="checked" /> Search By Theme</label>
-             <label><input type="radio" id="SearchByDestination" name="holidayPackage"  value="0" /> Search By Destination</label>
-          </div>
-         <div id="SearchTheme">
-            <div class="wgtfrmrow">
-              <label>Choose Theme</label>
-               <select id="theme" name="theme">
-               <option selected="selected">--Please Select--</option>                  
-               </select>
-            </div>
-            <div class="wgtfrmrow">
-                <label><input type="checkbox" id="domTheme" name="domTheme"  checked="checked" /> Domestic</label>
-                <label><input type="checkbox" id="intTheme" name="intTheme" /> International</label>
-            </div>
-         </div>
-         <div id="SearchDestination" style="display:none;">
-             <div class="wgtfrmrow">
-                <label><input type="radio" id="SearchByDomestic" name="city" /> Domestic</label>
-                <label><input type="radio" id="SearchByInternational" name="city" /> International</label>
-            </div>
-            <div class="wgtfrmrow">
-                <label>Choose Destination</label>
-                <div id="domestic">    
-                       <select id="domCity" name="domCity">
-                         <option selected="selected">--Please Select--</option>
-                       </select>
-                    </div>
-                <div id="international" style="display:none;">
-                     <select id="intCity" name="cityName">
-                        <option selected="selected">--Please Select--</option>
-                     </select>
-                  </div>
-            </div>
-         </div>
-         <div class="wgtfrmrow">
-             <a href="#!" id="packageSearch" class="fright wgtsearchbtn">Seach Holidays</a>
-         </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
 
-    </div>
-    Surrender.  And we’ll take you where you want to go, but didn’t know.
-			</div>
-   </div> 
-        <script src="js/page.js"></script>
-		<script>
-			$(function() {
-
-				Page.init();
-
-			});
-		</script>
-
-            </body>
+  <div id="GrayBox" class="greybg"></div>
+  
+</body>
 </html>

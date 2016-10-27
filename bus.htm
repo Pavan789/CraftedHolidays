@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Form</title>
+    <link href="css/BusStyle.css" rel="Stylesheet" type="text/css" media="all" />
+
+    <link href="css/JQuery_UI.css" rel="stylesheet"type="text/css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/BusJs.js"></script> 
+
+</head>
+<body>
+    <div id="Logo" style="display: none;">
+        <span class="fleft banklogo">
+            <img alt="" src="images/logo.png" />
+        </span>
+    </div>
+    <div id="load-img" style="display: none;">
+        <div>
+            <img src="images/loader.gif"  alt="Loader" />
+        </div>
+    </div>
+      <div class="wgtfrmbox">
+          <form id="BusForm" action="" method="post">
+      
+       <!--Bus Starts-->
+                  <div id="Bus" >
+                        <div style="display: none;" class="error_msg" id="errMsg">
+                          <span id="errMessage"></span>
+                        </div>
+                        <div class="wgtfrmrow">
+							<div class="wgtfrmleft">
+								<label>Leaving from</label>
+								<input type="text" onblur="markout(this, 'Enter any city')" onfocus="markin(this, 'Enter any city')"
+										 value="Enter any city" name="busSource" id="busSource" />
+								<input type="hidden" value="" name="hidCityCode" id="hidCityCode" />
+								<input type="hidden" value="" name="SourceId" id="SourceId" />
+							</div>
+							<div class="wgtfrmright">
+								<label>Going to</label>
+                                <select id="selectedDestinationCity" name="selectedDestinationCity">
+                                    <option selected="selected" value="0">Choose From List</option>
+                                </select>
+                                <input type="hidden" value="" name="BusDestination" id="BusDestination" />
+                                <input type="hidden" value="" name="DestinationId" id="DestinationId" />
+                            </div>
+						</div>	
+                        <div class="wgtfrmrow">
+							<div class="wgtfrmleft">  
+								<label>Departure</label>
+								<input type="text" id="departureDate" name="departureDate" value="DD/MM/YYYY" readonly="readonly" class="wgtcal"/>
+                            </div>
+						</div>
+						<div class="wgtfrmrow">						
+							<a href="#!" id="busSearch" class="wgtsearchbtn fright"><span class="fa fa-bus wgticon"></span> Search Bus</a>
+                        </div>  
+                    </div>
+       <!--Bus ends here-->
+   
+          </form>
+     </div>
+    <div id="GrayBox" class="greybg"></div>
+	
+</body>
+</html>

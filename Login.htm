@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Form</title>
+    <script type="text/javascript" src="js/LoginJs.js"></script> 
+
+</head>
+<body  onload="javascript:LoginCheck()">
+      <div class="frm_otr">
+          <form id="LoginForm" action="" method="post">
+        <div>
+		<!--
+        here we required sessionId comes in responseText[1] from login method of jquery
+        please check login method of hazarroJs.js -->
+
+
+        <input type="hidden" id="sessionId" name="sessionId" value=""/>
+        </div>
+                   <div class="login_reg login_mid">
+                      <ul>
+                        <li id="loggedInName" class="msg" style=" background:none;"></li>
+                        <li id="login"><a href="#null" onclick="javascript:ShowModalPopup()" title="Login">Sign In</a></li>
+                        <li id="register" style=" background:none"><a class="mr8" href="http://bookings.allwonders.com/Registration.aspx">Sign Up</a></li>
+                        <li id="editProfile" style="display:none;"><a href="#null" onclick="javascript:MyAccount()" title="My Account">My Account</a> </li>
+                        <li id="logout" style=" background:none;display:none;"><a class="mr8" href="#null" onclick="javascript:Logout();" title="Logout">Logout</a></li>
+                     </ul>
+                  </div>
+
+    </form>
+    </div>
+</body>
+</html>
