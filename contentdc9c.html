@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+<!-- Mirrored from www.craftedholidays.com/content.php?page=destinations&type=2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Oct 2016 05:38:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <title>
+    	   Crafted Holidays
+        </title>
+        <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/json2.html"></script>
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>  
+        
+        <!-- BookBlock -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <script src="js/modernizr.custom.79639.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+		<script src="js/jquery.jscrollpane.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/jquery.bookblock.js"></script>
+        <!-- BookBlock ends-->
+        
+        <!-- Time Select-->
+    	<link href="css/jquery.timepicker.css" rel="stylesheet" type="text/css" />
+    	<script type="text/javascript" src="js/jquery.timepicker.js"></script>
+    	<script type="text/javascript" src="js/main.js"></script></script> 
+        <!-- Time Select -->
+        
+        <script  type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $( "#menu ul li" ).mouseover(function() {
+                    //if ($(this).find(".sub_menu").hasClass("sub_menu")) {
+                        $( "#menu ul li" ).removeClass("active");
+                        $( this ).addClass("active");         
+                    //}
+                  });
+                  
+                $( "#menu ul li" ).mouseout(function() {
+                    $( "#menu ul li" ).removeClass("active");
+                    $( "#menu ul" ).find(".current").addClass("active");
+                  });
+            })
+        </script>
+        
+        <link href="images/favicon.png" rel="shortcut icon" type="image/png" />
+    </head>
+
+    <body id="CraftedHolidays_Body">
+        <div id="main_holder">
+            <div id="header">
+                <div id="logo">
+                    <a href="index.html"><img src="images/logo.png" width="100%" height="auto" title="Crafted Holidays: Luxury travel in Tahiti, South Africa and India" /></a>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li class=""><a href="content171c.html?page=about">About</a></li>
+                        <li class="active current">
+                            <a href="contenta387.html?page=destinations">Destinations</a>
+                            <ul class="sub_menu">
+                                <li class="menu-toc-current"><a href="content398c.html?page=destinations&amp;type=1" class="">India</a></li>
+                                <li><a href="contentdc9c.html?page=destinations&amp;type=2" class="">South Africa</a></li>
+                                <li><a href="content5f59.html?page=destinations&amp;type=3" class="">Tahiti</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="contentf5d6.html?page=journey-styles">Journey Styles</a>
+                            <ul class="sub_menu">
+                                <li class="menu-toc-current"><a href="content176c.html?page=journey-style&amp;type=1" class="">Luxe Travel</a></li>
+                                <li><a href="content4ec3.html?page=journey-style&amp;type=2" class="">Adventure & Wildlife</a></li>
+                                <li><a href="content54e3.html?page=journey-style&amp;type=3" class="" onclick="nav(3);">Romantic</a></li>
+                                <li><a href="contentcf8f.html?page=journey-style&amp;type=4" class="">Beach Vacation</a></li>
+                                <li><a href="content9b77.html?page=journey-style&amp;type=5" class="">Wine Trails</a></li>
+                                <li><a href="content9516.html?page=journey-style&amp;type=6" class="">Spa & Wellness</a></li>
+                                <li><a href="contentbf1e.html?page=journey-style&amp;type=7" class="">Medical Tourism</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="contentf6f2.html?page=blog">Blog</a></li>
+                        <li class=""><a href="content53a6.html?page=contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="social">
+                    <div class="social_link"><a href="https://www.facebook.com/pages/Crafted-Holidays/808469965880732" target="_blank"><img src="images/social/facebook.png" width="100%" height="auto" /></a></div>
+                    <div class="social_link"><a href="http://www.twitter.com/shreyatravels"><img src="images/social/twitter.png"  width="100%" height="auto"/></a></div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+                    <script  type="text/javascript" language="javascript">
+
+            var countries = Array('','South Africa','India','Tahiti');
+            var journey_styles = Array('','Luxe Travel','Adventure & Wildlife','Romantic Vacation','Beach Vacation','Wine Trails','Spa & Wellness','Medical Tourism');
+            
+            $(document).ready(function(){
+            	$(".QTPopup").css('display','none');
+            	$(".lnchPopop1").click(function(){
+            		$(".QTPopup").animate({width: 'show'}, 'slow');
+                });	                    
+        		$(".closeBtn").click(function(){			
+        			$(".QTPopup").css('display', 'none');
+        		});
+            });
+            
+            function show_contact(country,style) {
+                $("#contact_country").html(countries[country]);
+                $("#contact_journey_style").html(journey_styles[style]);
+        		$(".QTPopup").animate({width: 'show'}, 'slow');	                    
+        		$(".closeBtn").click(function(){			
+        			$(".QTPopup").css('display', 'none');
+        		});
+            }
+        </script>
+
+		<div id="container" class="container">	
+			<div class="bb-custom-wrapper">
+				<div id="bb-bookblock" class="bb-bookblock">
+					<div class="bb-item" id="item1">
+						<div class="content">
+							<div class="scroller">
+								<div class="content_left" style="background: url(images/destinations/india/bg.jpg) center center repeat; background-size: 100% auto;">
+                                    <div class="content_left_block">
+                                        <h1>Destinations</h1>
+                                        <h2><div class="h2_wave_left"></div>India<div class="h2_wave_right"></div></h2>
+                                        <div class="content_description">
+                                            <center>
+                                                <span>
+                                                    A testament to the phrase ‘something for everyone’, India truly is the world in one country. Experience this kaleidoscope of cultures, past and present, like a Maharajah. Swaagatam.
+                                                </span>
+                                            </center>
+                                        </div>
+                                        <center>
+                                            <div class="select_style_heading">Journey Styles</div>
+                                            <div class="select_location">
+                                            
+                                                <div class="particular_locaton romantic">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" class="lnchPopop" onclick="show_contact(2,1);">
+                                                                <div class="select_image"><img src="images/journey-styles/luxe_on.png" width="85%" height="auto"  style="padding-top: 10%;" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name">Luxe Travel</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image"><img src="images/journey-styles/luxe_on.png" width="85%" height="auto"  style="padding-top: 10%;" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+   
+                                                <div class="particular_locaton adventure">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" onclick="show_contact(2,2);">
+                                                                <div class="select_image" style="padding-bottom: 19%;"><img src="images/journey-styles/adventure_on.png" width="65%" height="auto" /></div>
+                                                             </a>
+                                                        </div>
+                                                        <div class="country_name"> Adventure & Wildlife</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image" style="padding-bottom: 19%;"><img src="images/journey-styles/adventure_on.png" width="65%" height="auto" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="particular_locaton adventure">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" onclick="show_contact(2,6);">
+                                                                <div class="select_image" style="padding-bottom: 24%;"><img src="images/journey-styles/spa_on.png" width="90%" height="auto" style="padding-top: 25%;" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name">Spa & Wellness</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image" style="padding-bottom: 24%;"><img src="images/journey-styles/spa_on.png" width="90%" height="auto" style="padding-top: 25%;" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="particular_locaton medical">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" onclick="show_contact(2,7);">
+                                                                <div class="select_image"><img src="images/journey-styles/medical_on.png" width="90%" height="auto" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name"> Medical Tourism</div>
+                                                    </div>
+                                                    <div class="default">
+                                                    <div style="background-color: #474747;">
+                                                        <div class="select_image"><img src="images/journey-styles/medical_on.png" width="90%" height="auto" /></div>
+                                                    </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+                                                <div style="clear: both;"></div>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+                                <div class="content_right">
+                                    <!--<div id="arrow_right" class="arrow_right"></div>-->
+                                    <div class="content_slides">
+                                        <div class="slide" style="background: url(images/destinations/india/bg.jpg) no-repeat;">
+                                        </div>
+                                        <img src="images/destinations/india/1.jpg" />
+                                    </div>
+                                </div>
+                                <div style="clear: both;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item2">
+						<div class="content">
+							<div class="scroller">
+								<div class="content_left" style="background: url(images/destinations/south-africa/bg.jpg) center center repeat; background-size: 100% auto;">
+                                    <div class="content_left_block">
+                                        <h1>Destinations</h1>
+                                        <h2><div class="h2_wave_left"></div>South Africa<div class="h2_wave_right"></div></h2>
+                                        <div class="content_description">
+                                            <center>
+                                                <span>
+                                                    Retrace humanity’s exodus, through some of the most diverse landscapes and wildlife on the planet.  Adventure and exploration; seen through 5 star rose tinted glasses. Ngiyakewmukela.
+                                                </span>
+                                            </center>
+                                        </div>
+                                        <center>
+                                            <div class="select_style_heading">Journey Styles</div>
+                                            <div class="select_location">
+   
+                                                <div class="particular_locaton romantic">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" class="lnchPopop" onclick="show_contact(1,1);">
+                                                                <div class="select_image"><img src="images/journey-styles/luxe_on.png" width="85%" height="auto"  style="padding-top: 10%;" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name">Luxe Travel</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image"><img src="images/journey-styles/luxe_on.png" width="85%" height="auto"  style="padding-top: 10%;" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+   
+                                                <div class="particular_locaton adventure">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" onclick="show_contact(1,2);">
+                                                                <div class="select_image" style="padding-bottom: 19%;"><img src="images/journey-styles/adventure_on.png" width="65%" height="auto" /></div>
+                                                             </a>
+                                                        </div>
+                                                        <div class="country_name"> Adventure & Wildlife</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image" style="padding-bottom: 19%;"><img src="images/journey-styles/adventure_on.png" width="65%" height="auto" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="particular_locaton romantic">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" class="lnchPopop" onclick="show_contact(1,3);">
+                                                                <div class="select_image"><img src="images/journey-styles/romantic_on.png" width="95%" height="auto"  style="padding-top: 10%;" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name">Romantic</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image"><img src="images/journey-styles/romantic_on.png" width="95%" height="auto"  style="padding-top: 10%;" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="particular_locaton medical">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" onclick="show_contact(1,5);">
+                                                                <div class="select_image"><img src="images/journey-styles/wine_on.png" width="43%" height="auto" /></div>
+                                                             </a>
+                                                        </div>
+                                                        <div class="country_name">Wine Trails</div>
+                                                    </div>
+                                                    <div class="default">
+                                                    <div style="background-color: #474747;">
+                                                        <div class="select_image"><img src="images/journey-styles/wine_on.png" width="43%" height="auto" /></div>
+                                                    </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+                                                <div style="clear: both;"></div>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+                                <div class="content_right">
+                                    <div class="content_slides">
+                                        <div class="slide" style="background: url(images/destinations/south-africa/bg.jpg) no-repeat;">
+                                        </div>
+                                        <img src="images/destinations/south-africa/1.jpg" />
+                                    </div>
+                                </div>
+					       </div>
+					   </div>
+                    </div>
+					<div class="bb-item" id="item3">
+						<div class="content">
+							<div class="scroller">
+								<div class="content_left" style="background: url(images/destinations/tahiti/bg.jpg) center center repeat; background-size: 100% auto;">
+                                    <div class="content_left_block">
+                                        <h1>Destinations</h1>
+                                        <h2><div class="h2_wave_left"></div>Tahiti<div class="h2_wave_right"></div></h2>
+                                        <div class="content_description">
+                                            <center>
+                                                <span>
+                                                    Yield to French Polynesia’s largest and oldest island; a monolith of forested green slopes bordered by white sands and lagoons of the most vivid turquoise imaginable. This is island living, straight out of Hollywood. Maeva.
+                                                </span>
+                                            </center>
+                                        </div>
+                                        <center>
+                                            <div class="select_style_heading">Journey Styles</div>
+                                            <div class="select_location">
+
+                                                <div class="particular_locaton romantic">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" class="lnchPopop" onclick="show_contact(3,1);">
+                                                                <div class="select_image"><img src="images/journey-styles/luxe_on.png" width="85%" height="auto"  style="padding-top: 10%;" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name">Luxe Travel</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image"><img src="images/journey-styles/luxe_on.png" width="85%" height="auto"  style="padding-top: 10%;" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="particular_locaton romantic">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" class="lnchPopop" onclick="show_contact(3,3);">
+                                                                <div class="select_image"><img src="images/journey-styles/romantic_on.png" width="95%" height="auto"  style="padding-top: 10%;" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name">Romantic</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image"><img src="images/journey-styles/romantic_on.png" width="95%" height="auto"  style="padding-top: 10%;" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="particular_locaton adventure">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" onclick="show_contact(3,4);">
+                                                                <div class="select_image" style="padding-bottom: 19%;"><img src="images/journey-styles/beach_on.png" width="90%" height="auto" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name">Beach Vacation</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image" style="padding-bottom: 19%;"><img src="images/journey-styles/beach_on.png" width="90%" height="auto" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+                                                   
+                                                <div class="particular_locaton adventure">
+                                                    <div class="hover">
+                                                        <div style="background-color: #8abe3e;">
+                                                            <a href="#" onclick="show_contact(3,6);">
+                                                                <div class="select_image" style="padding-bottom: 24%;"><img src="images/journey-styles/spa_on.png" width="90%" height="auto" style="padding-top: 25%;" /></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="country_name">Spa & Wellness</div>
+                                                    </div>
+                                                    <div class="default">
+                                                        <div style="background-color: #474747;">
+                                                            <div class="select_image" style="padding-bottom: 24%;"><img src="images/journey-styles/spa_on.png" width="90%" height="auto" style="padding-top: 25%;" /></div>
+                                                        </div>
+                                                        <div class="country_name">&nbsp;</div>
+                                                    </div>
+                                                </div>
+                                                
+                                        </center>
+                                    </div>
+                                </div>
+                                <div class="content_right">
+                                    <div class="content_slides">
+                                        <div class="slide" style="background: url(images/destinations/tahiti/1.jpg) no-repeat;">
+                                        </div>
+                                        <img src="images/destinations/tahiti/1.jpg" />
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+					<span id="bb-nav-prev" class="arrow_left"></span>
+					<span id="bb-nav-next" class="arrow_right"></span>
+				
+			</div>
+			<div class="QTPopup">
+                <div class="popupGrayBg"></div>
+                <div class="QTPopupCntnr">
+                    <div class="gpBdrRight">
+                        <h2 style="color: black;line-height: 2.5vw; padding-bottom: 3%;">THAT’S ONE FOOT <br />OUT THE DOOR!</h2>
+                        <div class="content_description">
+                            <center>
+                                <span style="width: 65%; padding-bottom: 1%;font-weight: lighter;">
+                                    <div>We’ve taken the first steps towards planning your <span id="contact_journey_style">LUXE TRAVEL</span> in <span id="contact_country">SOUTH AFRICA</span>.<br />Fill in the necessaries below and we’ll get back to you, at your earliest convenience. </div>
+                                </span>
+                            </center>
+                        </div>
+                        <div class="contact_form" style="width: 85%;margin-left: 7.5%;">
+                            <form>
+                                <ul>
+                                    <li><input type="text" name="name" placeholder=" NAME... " style="border: 1px solid #dfdfdf;"/></li>
+                                    <li><input type="text" name="phone" placeholder="CONTACT NUMBER..."  style="border: 1px solid #dfdfdf;"/></li>
+                                    <li><input id="myPicker" class="time time_img" type="text" placeholder="FROM 8:30 AM" style="width: 33%;border: 1px solid #dfdfdf;"  /> <input id="myPicker1" class="time time_img" type="text"  placeholder=" TO 12:30 PM" style="border: 1px solid #dfdfdf;width: 33%;" /></li>
+                                    <li><div class="contact_notice">Information solicited will be kept strictly confidential.</div> <input type="button" name="submit" class="form_submit" value="SUBMIT" style="float: left;"/></li>
+                                </ul>
+                            </form>
+                        </div>
+                        <a href="#" class="closeBtn" title="Close"></a>
+                    </div>
+                </div>
+            </div>	
+		</div><!-- /container -->        </div> 
+        <script src="js/page.js"></script>
+		<script>
+			$(function() {
+
+				Page.init();
+
+			});
+		</script>   
+
+                    <script>
+                var jump_to = 2;
+                $(document).ready(function() {
+                    //alert(1);
+                    setTimeout('bbit();',1000);
+                    //alert(2); 
+                });
+                
+                function bbit() {
+                    //alert(3);
+                    //bb.jump(1);
+                    //nav(3);
+                }
+            </script>
+            </body>
+
+<!-- Mirrored from www.craftedholidays.com/content.php?page=destinations&type=2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Oct 2016 05:38:26 GMT -->
+</html>

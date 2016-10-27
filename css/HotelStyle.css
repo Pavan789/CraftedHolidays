@@ -1,0 +1,160 @@
+﻿.wgtfrmbox *{box-sizing:border-box;}
+.fright{float:right;}
+.error_msg{background:#fae6bb; color:#df0606; border:1px solid #efae79; border-radius:3px; padding:5px; margin:0 0 5px; text-align:center; float:left; width:100%; font-family:Arial, Sans-Serif;}
+.greybg{left:0; top:0; position:fixed; width:100%; height:100%; z-index:9; background:rgba(0,0,0,.7); display:none;}
+.wgtpopbox{position:fixed; top: 30%; left:50%; margin-left:-22%; width: 45%; font-family: sans-serif; z-index:10;}
+.wgtpopbox *{box-sizing:border-box;}
+.wgtpop{background: white none repeat scroll 0 0; border: 5px solid #c7c7c7; border-radius: 15px; float: left; padding: 15px; text-align: center; width: 100%; font-family:sans-serif;}
+.wgtpop b{font-family:sans-serif; font-size:18px; font-weight:normal; color:#555; padding:15px 0; display:block;}
+.wgtpoplogo{display:block; width:100%; text-align:center; padding:20px;}
+
+/**-----common form --------*/
+.wgtfrmbox{width:400px; float:left; background:#f7f7f7; border:1px solid #d7d7d7; border-radius:5px; padding:15px; font-size:12px; position:relative;}
+.wgtfrmrow{width:100%; float:left; margin-bottom:8px;  font-family:sans-serif;}
+.wgtfrmleft, .wgtfrmright{width:calc(100% / 2 - 8px); float:left; margin-left:15px;}
+.wgtfrmleft{margin-left:0px;}
+.wgtfrmleft label, .wgtfrmright label, .wgtpaxbox label, .wgtclass label{width:100%; float:left; padding:5px 0;}
+.wgtfrmbox input[type="text"], .wgtfrmbox select{width:100%; float:left; padding:8px; background:#fff; border:1px solid #d8d8d8; font-size:12px; color:#555;}
+.wgtcal{background:#fff url(../images/cal.png) no-repeat 97% center !important; cursor:pointer;}
+.wgtsearchbtn{cursor:pointer; border-radius:5px; background:linear-gradient(#D65024, #F86331); color:#fff; font-size:16px; padding:8px; display:inline-block; text-decoration:none;}
+.wgtsearchbtn:hover{background:linear-gradient(#F86331, #D65024);}
+
+/*Hotels*/
+.wgthtlistbox label{width:100%; float:left; margin:3px;}
+.wgthtlcity{float:left; width:70% !important;}
+.wgthtlistbox a{padding:10px 15px; float:left; color:#EB5518;}
+.wgthtldate{width:40%; margin-right:10px; float:left;}
+.wgthtlngt{width:14.2%; float:left;}
+.wgthtlroombox{float:left; width:60px; margin-top:20px;}
+.wgthtlchldbox{float:left; width:60px; margin-top:10px;}
+.wgthtlpax{float:left; width:38.6%; margin-left:15px;}
+/*hotelsearch popup*/
+.wgtpopdatebox{width:100%; float:left;}
+.wgtpopdatebox span{background:#f7f7fa; color:#555; width: calc(100% / 2 - 8px); margin-left:15px; padding:15px; float:left;}
+.wgtpopdatebox span:first-child{margin-left:0; border-right:2px solid #fff;}
+.wgtpopdatebox span em{font-style:normal; color:#D65024; font-weight:bold;}
+.wgtpopdatebox b{color:#D65024;}
+.wgthtlprocess{font-size:12px; padding:10px; text-align:center; display:block;}
+
+/*================ common css for All ===================*/
+ .banklogo{width:100%;}
+ .reponsive_pad{clear:both;}
+.popboxsize{position:fixed; width:550px;display:none;  top: 40%; left: 50%; margin-top: -100px; margin-left: -250px; padding:15px; z-index:100;}
+.flightpopup{ width: 100%; float: left; background: white; border: 5px outset #2C5DB9; text-align:center; padding:15px; border-radius:15px; box-shadow:0 3px 4px #000;}
+.flgt_msg{font-size: 15px; padding: 15px; float: left; line-height:20px;}
+.btn_comon{ background:$btnbg; padding:5px 7px; color:#fff; -webkit-border-radius: 2px;-moz-border-radius: 2px; border-radius: 2px; border:none; -webkit-box-shadow: #B3B3B3 2px 2px 2px;-moz-box-shadow: #B3B3B3 2px 2px 2px; box-shadow: #B3B3B3 2px 2px 2px;}
+.btn_comon a{ text-decoration:none; color:#fff;}
+.btn_comon:hover{ background:$btnbg-hover; }
+.ml15{margin-left:15px;}
+.small_btn{ border-radius:3px; background:$btnbg; color:#fff;  font-size:12px; text-decoration:none; cursor:pointer; transition:1s; border:none; display: inline-block;}
+.small_btn{padding:5px 10px;}
+.small_btn:hover{ background:$btnbg-hover; color:#fff;}
+.searchpopbg{background:rgba(0, 0, 0, .5); position:fixed; left:0; top:0; width:100%; height:100%; display:none;}
+.searchbox{height:150px; width: 100%; float: left; background: #fff; border: 5px outset #2C5DB9; display: none;}
+.error_popup{margin-top:15px;}
+
+/*Login POopup*/
+
+/************************************Login**************************************************************/
+.login_popup_module { width: 235px; height: 239px; position: absolute; right: 40%; top: 30%; display: none;}
+.login_content { width: 215px; margin: auto; }
+.login_details { float: left; width: 97%; margin: 0; padding: 0; }
+.login_details em.close { float: left; width: 100%; margin: 0; padding: 5px 0 5px 0; }
+.login_details em.close i { float: right; width: 12px; margin: 0; padding: 5px 0 0; }
+.login_details em.close span.heading { float: left; width: 190px; margin: 0; padding: 5px 0 0; text-align: center; font-size: 12px; font-weight: bold; color: #444; }
+.login_details em.close img, .login_details p.fields span strong img { cursor: pointer; }
+.login_details p.fields strong.error_msg { float: left; width: 100%; margin: -8px 0 0; padding: 0 0 4px 0; text-align: center; font-size: 11px; color: #f00; }
+.login_details p.fields, .login_details p.fields span { float: left; width: 100%; margin: 0; padding: 13px 0 8px 0; border-top: solid 1px #666; border-bottom: solid 1px #999; }
+.login_details p.fields span { padding: 0 0 5px 0; border: none; }
+.login_details p.fields span label { float: left; width: 70px; margin: 0; padding: 2px 0 0 0px; font-size: 12px; font-weight: bold; color: #383737; }
+.login_details p.fields span em { float: left; width: 138px; margin: 0; padding: 0; }
+.login_details p.fields span em .txtbox { float: left; width: 134px; height: 17px; font-size: 13px; color: #555; border: solid 1px #aaa; }
+.login_details p.fields span strong { float: left; width: 138px; margin: 0; padding: 0; }
+.login_details p.fields span strong b { float: left; width: 40px; margin: 0; padding: 0; }
+.login_details p.fields span strong a { float: left; margin: 0; padding: 2px 0 0 4px; font-size: 10px; font-style: normal; color: #257CA5; }
+.login_details p.fields span strong a { text-decoration: inline; }
+.login_details p.fields span strong a:hover { text-decoration: none; }
+.login_details p.promote { float: left; width: 99%; margin: 0; padding: 20px 0 0 10px; font-size: 13px; font-weight: bold; color: #257CA5; line-height: 1.5em; letter-spacing: .07em; }
+.forgot_pwd_popup { width: 250px; position: absolute; right: 40%; top: 30%; display: none;background: none repeat scroll 0 0 #F1F1F1;border: 1px solid #D7D5D5;border-radius: 7px 7px 7px 7px;box-shadow: 0 3px 2px 0 rgba(50, 50, 50, 0.75); }
+.forgot_pwd_content { float: left; width: 100%; margin: 0; padding: 4px 0 0; background: url(../folder_flight/forgot_pwd_top.gif) no-repeat 0 0; }
+.forgot_pwd_content em { float: left; width: 100%; margin: 0; padding: 0; }
+.forgot_pwd_details { float: left; width: 100%; margin: 0; padding: 0;}
+.forgot_pwd_details em.close { float: left; width: 97%; margin: 0; padding: 3px 0 0; text-align: right; }
+.forgot_pwd_details em.close img { cursor: pointer; }
+.forgot_pwd_details div { width: 93%; margin: auto; }
+.forgot_pwd_details div p { width: 100%; float: left; margin: 0; padding: 3px 0 10px 0; font-size: 11px; font-weight: bold; color: #444; border-bottom: solid 1px #444; }
+.forgot_pwd_details div span.field, .forgot_pwd_details div span.btn { width: 100%; float: left; margin: 0; padding: 10px 0 5px 0; font-size: 11px; color: #444; }
+.forgot_pwd_details div span.btn { padding: 0 0 5px 0; }
+.forgot_pwd_details div span label { width: 62px; float: left; margin: 0; padding: 2px 5px 0 10px; font-size: 11px; font-weight: bold; color: #444; }
+.forgot_pwd_details div span em { width: 135px; float: left; margin: 0; padding: 0; }
+.forgot_pwd_details div span em img { cursor: pointer; }
+.forgot_pwd_details div span em .txt_avg, input.trip_id { width: 150px; height: 14px; font-size: 12px; border: solid 1px #aaa; }
+.modalBG {background-color: #333333;height: 100%;left: 0;opacity: 0.4;position: fixed;top: 0; width: 100%;z-index: 9;display: none;}
+
+/*******************Error Message CSS*******************/
+
+.error_heading { width: 100%; float: left; margin: 0px; color: #333; font-weight: bold; text-align: center; padding-bottom: 5px; padding-top: 5px; background: #D2E5F3; }
+.error_heading span { margin: 0px; padding: 3px 10px; color: #010101; }
+/*comonstylesheet*/
+.holiday-heading{background:$navbg; color:$navcolor; font-size: 16px; padding: 8px 15px;}
+.subheading{font-size:14px; color:$btnbg-hover;}
+
+#errMess,#errMess1, #errMessHotel, #errMessPkg, #errMsg,.error_msg,.errMess,.alert{font-size:12px; font-weight:normal; border: 1px solid #faebcc;background: #fcf8e3;color: red; border-radius:6px; margin:10px 0; padding: 8px;}
+.success{font-size:12px; font-weight:normal; border: 1px solid #C9CBDD; background: #FFFCE5; color:$btnbg-hover; border-radius:6px; margin:10px 0; padding: 8px;}
+ 
+ /*calender UI set*/
+.searching_container{ position:relative; width:100%;}
+.searching_container .inner_container{ text-align:center; width:50%; margin:28px auto; border:2px solid $mainborder; border-radius:8px; -ms-border-radius:8px; -webkit-border-radius:8px; box-shadow:2px 1px 5px #c0c0c0;background-color: #FFFFFF; -webkit-box-shadow: #B3B3B3 2px 2px 2px;-moz-box-shadow: #B3B3B3 2px 2px 2px; box-shadow: #B3B3B3 2px 2px 2px;}
+.searching_container .inner_container .searching_logo{ margin:30px 0;}
+.searching_container .inner_container h1{ font-size:18px; padding:15px 0 10px; color:#000; float:left; margin:3px 0; font-weight:bold; width:100%;}
+.searching_container .inner_container h2{ font-size:18px; color:#000; clear:both; text-align:center;}
+.searching_container .inner_container p{ color:#fff; background:$btnbg; font-size:16px; float:left; width:100%; margin:30px auto; line-height:30px; font-weight:bold;}
+.searching_container .inner_container p span{ display:block; float:left; text-align:center;border-right:1px solid #fff; line-height:29px; padding:10px 0; }
+.searching_container .inner_container p span b{ color:#fff;}
+
+/******************************************************Calender UI *********************************************/
+.ui-datepicker {width: 22em;padding: .2em .2em 0;display: none;border: 1px solid #aaaaaa;background: #ffffff url(../images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;color: #222222;font-family: Verdana,Arial,sans-serif;font-size: 1.1em;}
+.ui-datepicker .ui-datepicker-header {background:$btnbg;color: #FFFFFF;font-weight: bold;padding: 0.2em 0;position: relative;}
+.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 11px; }
+.ui-widget-header .ui-icon {background-image: url("../HolidayPackageImages/add_icon.gif");}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {background:#E6E6E6; border:1px solid #d3d3d3; color:$btnbg-hover;font-weight: normal;}
+.ui-slider-handle{ background:$maincolor!important}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {background: url("images/ui-bg_glass_65_ffffff_1x400.png") repeat-x scroll 50% 50% #FBF9EE; border: 1px solid $mainborder;color: #212121;font-weight: normal;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background: none repeat scroll 0 0 #FBF9EE;border: 1px solid #F6AE38;color: #363636;}
+.ui-state-hover .ui-icon, .ui-sate-focus .ui-icon{background-image: url("../HolidayPackageImages/add_icon.gif");}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{/*background: url("../HolidayPackageImages/add_icon.gif") no-repeat scroll 50% 50% transparent;*/}
+.ui-datepicker th {padding: .7em .3em;text-align: center;font-weight: bold;background-color: #E8E8E8;border-style: none none solid;border-width: 0 0 1px;border-color: #A7A7A7;}
+.ui-icon {width: 16px;height: 16px;display: block;text-indent: -99999px;overflow: hidden;background-repeat: no-repeat;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {background: none repeat scroll 0 0 #FBF9EE; border: 1px solid $mainaltcolor;color:$maincolor;}
+.ui-widget-content .ui-icon {background-image: url(../images/pre_next.png)/*{iconsContent}*/; }
+.ui-slider-handle{ -moz-border-radius:14px/*{cornerRadius}*/; -webkit-border-radius: 14px/*{cornerRadius}*/; border-radius: 14px/*{cornerRadius}*/;}
+ 
+ @media screen and (max-width:767px)
+{
+.login_popup_module,.forgot_pwd_popup{right: 5%;width: 90%;}
+.log_forgot_pass{ margin-left:0;}
+/*flight popup*/
+.popboxsize{width:310px; max-width:550px; margin-left: -155px; top:220px;}
+.flightpopup{height:auto;}
+#specialReturnFares{margin-top:10px;}
+#originalSearch{ margin-right:0;}
+/*calender part*/
+#ui-datepicker-div{ width:88% !important; left:4% !important; top:43% !important}
+.ui-datepicker-multi-2 .ui-datepicker-group,.ui-datepicker-multi .ui-datepicker-group table{ width:100%!important;}
+.ui-datepicker td span, .ui-datepicker td a { padding:.2em; font-size:16px; font-weight:bold!important; text-align:center;}
+.ui-datepicker .ui-datepicker-title{ font-size:1.25em;}
+.ui-datepicker-multi .ui-datepicker-group table{ width:100%;}
+.searching_container .inner_container{ width:94%;}
+.banklogo img { width:75%;}
+}
+@media (min-width:768px) and (max-width:991px)
+{
+.login_popup_module{right: 20%;width:60%;}
+.forgot_pwd_popup{ width:45%; left:25%;}
+}
+@media (min-width:992px) and (max-width:1024px)
+{
+.login_popup_module{right:30%;width:40%;}
+.forgot_pwd_popup{ width:40%; left:30%;}
+ }
+
